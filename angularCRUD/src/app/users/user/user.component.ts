@@ -46,7 +46,7 @@ export class UserComponent implements OnInit {
   }
 
   onSubmit(form : NgForm){
-    if(form.value.User_ID == null)
+    if(form.value.User_ID == null && form.value.FirstName!= null && form.value.LastName!= null && form.value.Age!= null )
     {
       if(this.userService.selectedImageFile !=null)
         form.value.ImageUrl =this.userService.selectedImageFile.name;
