@@ -1,0 +1,44 @@
+
+    <form class="user-form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm,ImageUrl)" *ngIf="userService.showvar">
+        <input type = "hidden" name="User_ID" #User_ID="ngModel" [(ngModel)]="userService.selectedUser.User_ID">
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <input class="form-control" name="FirstName" #FirstName="ngModel" [(ngModel)]="userService.selectedUser.FirstName" placeholder="First Name" required>
+          <div class="validation-error" *ngIf="FirstName.invalid && FirstName.touched">This Field is Required</div>
+        </div>
+        <div class="form-group col-md-3">
+            <input class="form-control" name="LastName" #LastName="ngModel" [(ngModel)]="userService.selectedUser.LastName" placeholder="Last Name" required>
+            <div class="validation-error" *ngIf="LastName.invalid && LastName.touched">This Field is Required</div>
+        </div>
+        <div class="form-group col-md-3">
+            <input class="form-control" type="number" name="Age" #Age="ngModel" [(ngModel)]="userService.selectedUser.Age" placeholder="Age" required>
+            <div class="validation-error" *ngIf="Age.invalid && Age.touched">Valid number value required</div>
+        </div>
+        <div class="form-group col-md-3">
+            <input class="form-control" name="Interest" #Interest="ngModel" [(ngModel)]="userService.selectedUser.Interest" placeholder="Interest">
+        </div>
+      </div>
+
+      <div class="form-group">
+          <input class="form-control" name="Address" #Address="ngModel" [(ngModel)]="userService.selectedUser.Address" placeholder="Address">
+      </div>
+       <div class="form-group">
+          <input type="file" #Image accept="image/*" name="ImageUrl" (change)=onSelectFile($event.target.files) #ImageUrl="ngModel" [(ngModel)]="userService.selectedUser.ImageUrl" placeholder="select image">
+          <label for="ImageUrl">Select Image</label>
+        </div>   
+      
+      <div class="form-row">
+        <div class="form-group col-md-4">
+            <button [disabled]="!userForm.valid" type="submit" class="btn btn-lg btn-block btn-info" style="height: 50px; text-align:center; background:black; border-color:Gray; text-decoration-color:white"><i class="fa fa-floppy-o"></i> Submit</button>
+        </div>
+        <div class="form-group col-md-4">
+            <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(userForm)" style="height: 50px; text-align:center; background:black; border-color:Gray; text-decoration-color:white"><i class="fa fa-repeat"></i> Reset</button>
+        </div>
+        <div class="form-group col-md-4">
+          <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="closeForm()" style="height: 50px; text-align:center; background:black; border-color:Gray; text-decoration-color:white"> cancel</button>
+       </div>
+    
+      </div>
+    </form>
+ 
