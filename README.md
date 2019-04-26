@@ -71,7 +71,7 @@ Run from IIS Express , it should Launch http://localhost:57702
 ``````````````````````````````````````````````
 cd <installFolder>\UserRegister\angularCRUD
 npm install
-ng serve
+ng serve --o
 ``````````````````````````````````````````````
 
 #### Then navigate to http://localhost:4200 to run the application. 
