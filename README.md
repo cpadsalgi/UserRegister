@@ -79,7 +79,7 @@ ng serve
 ------------------------------------------------------------------------------
 
 
-![Screenshot](Snapshot1.png)
+![Screenshot](https://github.com/cpadsalgi/UserRegister/blob/master/SNAPSHOT1.png)
 
 
-![Screenshot](Snapshot1=2.png)
+![Screenshot](https://github.com/cpadsalgi/UserRegister/blob/master/SNAPSHOT1.png)
