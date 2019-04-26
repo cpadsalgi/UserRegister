@@ -135,8 +135,8 @@ namespace WebAPI.Controllers
         
         public IHttpActionResult DeleteUser(int id)
         {
-            userFacade.DeleteUser(id);
-            return Ok();
+            
+            return Ok(userFacade.DeleteUser(id));
         }
 
 

@@ -74,18 +74,18 @@ namespace DataLayer
 
   
         
-        public bool DeleteUser(int id)
+        public User DeleteUser(int id)
         {
             User user = db.Users.Find(id);
             if (user == null)
             {
-                return false;
+                return null;
             }
 
             db.Users.Remove(user);
             db.SaveChanges();
 
-            return true;
+            return user;
         }
 
 

@@ -17,7 +17,7 @@ export class UserListComponent implements OnInit {
   }
   showForNewUSer()
   {
-    this.userService.selectedUser =null;
+   // this.userService.selectedUser =null;
     this.userService.showvar = !this.userService.showvar;
   }
 

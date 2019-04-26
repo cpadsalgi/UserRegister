@@ -48,7 +48,7 @@ export class UserService {
 
   deleteUser(id : number){
     return this.http.delete('http://localhost:57702/api/Users/'+id).pipe(map(res => res.json()));
-    this.getUserList();
+    //this.getUserList();
 
   }
 

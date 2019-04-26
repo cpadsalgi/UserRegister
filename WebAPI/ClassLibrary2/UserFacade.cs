@@ -28,7 +28,7 @@ namespace ServiceLayer
             return userRepository.PostUser(user);
         }
 
-        public bool DeleteUser(int id)
+        public User DeleteUser(int id)
         {
             return userRepository.DeleteUser(id);
         }
