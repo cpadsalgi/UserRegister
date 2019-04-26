@@ -12,9 +12,9 @@ GO
 
 CREATE TABLE [dbo].[User](
 	[User ID] [int] IDENTITY(1,1) NOT NULL,
-	[FirstName] [varchar](50) NULL,
-	[LastName] [varchar](50) NULL,
-	[Age] [int] NULL,
+	[FirstName] [varchar](50) NOT NULL,
+	[LastName] [varchar](50) NOT NULL,
+	[Age] [int] NOT NULL,
 	[Address] [varchar](50) NULL,
 	[Interest] [varchar](50) NULL,
 	[ImageURL] [varchar](500) NULL,
